@@ -10,7 +10,11 @@ class Timer extends Component {
     };
   }
 
-  shouldComponentUpdate() {
+  shouldComponentUpdate(nextProps, nextState) {
+    if (this.state.time === nextState.time) {
+      return false
+    }
+    return true
   }
 
   componentDidUpdate() {
