@@ -14,6 +14,10 @@ class Timer extends Component {
     this.timer.current.style.color = "#" + Math.floor(Math.random() * 16777215).toString(16);
   }
 
+  componentShouldUpdate() {
+
+  }
+
   componentDidMount() {
     this.interval = setInterval(
       this.clockTick,
